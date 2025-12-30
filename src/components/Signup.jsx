@@ -19,7 +19,7 @@ export default function Signup({tab,setTab}){
     e.preventDefault();
     const data = {firstName,surName,email,password,date};
     setMessege("Creating Account...");
-    try{const req = await fetch("https://the-forge-frontend-six.vercel.app//auth/signup",{method:"POST",
+    try{const req = await fetch("https://the-forge-backand.vercel.app/auth/signup",{method:"POST",
                                                               headers:{"Content-Type":"application/json"},
                                                               body:JSON.stringify(data)})
     if(req.status===409)
@@ -57,4 +57,5 @@ export default function Signup({tab,setTab}){
             <div className={`${messege===""?"hidden":"block"} absolute inset-0 rounded-[40px] bg-[rgba(0,0,0,0.3)]`}></div>
         </form>
     )
+
 }
