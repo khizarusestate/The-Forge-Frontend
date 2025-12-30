@@ -21,7 +21,7 @@ export default function Home({tab,setTab,loginDetecter}){
                     )
                 }
                 <div className="absolute h-full w-full inset-0 border-7 border-b-red-900 rounded-b-[30%] bg-[rgba(0,0,0,0.5)] z-10"></div>
-                <div className="absolute h-[90vh] w-full inset-0 rounded-b-[30%] md:bg-[url(Images/Homebg.png)] bg-[url(Images/HomebgPhone.png)] -z-10"></div>
+                <div className="absolute h-[90vh] w-full inset-0 rounded-b-[30%] -z-10" style={{ backgroundImage: "url('/images/Homebg.png')" }}></div>
             </div>
              <div className={`${tab==="Login"||tab==="Signup"?"block":"hidden"} absolute h-full w-full rounded-b-[30%] inset-0 backdrop-blur-[10px] z-10`}></div>
             {tab==="Login"&&(<Login setTab={setTab}/>)}
@@ -29,4 +29,5 @@ export default function Home({tab,setTab,loginDetecter}){
         
         </section>
     )
+
 }
