@@ -9,7 +9,7 @@ export default function Contact(){
         const data = {email,help};
         setMessege("Please Wait...");
        try{ 
-               const req = await fetch(https://the-forge-backand.vercel.app/help,{method:"POST",
+               const req = await fetch("https://the-forge-backand.vercel.app/help",{method:"POST",
                                                                         headers:{"Content-Type":"application/json"},
                                                                        body:JSON.stringify(data)
         })
@@ -55,3 +55,4 @@ export default function Contact(){
     )
 
 }
+
