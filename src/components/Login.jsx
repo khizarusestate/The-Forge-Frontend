@@ -8,7 +8,7 @@ export default function Login({tab,setTab}){
         e.preventDefault();
         const data = {email,password};
         setMessege("Please Wait...");
-        try{const req = await fetch("https://the-forge-frontend-six.vercel.app//auth/login",{ method:"POST",
+        try{const req = await fetch("https://the-forge-backand.vercel.app/auth/login",{ method:"POST",
                                                                        headers:{"Content-Type":"application/json"},
                                                                        body:JSON.stringify(data)})  
         if(req.status===404)
@@ -49,4 +49,5 @@ export default function Login({tab,setTab}){
             <div className={`${messege===""?"hidden":"block"} absolute inset-0 rounded-[40px] bg-[rgba(0,0,0,0.3)] backdrop-blur-[3px]`}></div>
         </form>
     )
+
 }
