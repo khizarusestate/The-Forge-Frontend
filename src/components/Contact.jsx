@@ -9,7 +9,7 @@ export default function Contact(){
         const data = {email,help};
         setMessege("Please Wait...");
        try{ 
-               const req = await fetch("Backand-Url here",{method:"POST",
+               const req = await fetch(https://the-forge-backand.vercel.app/help,{method:"POST",
                                                                         headers:{"Content-Type":"application/json"},
                                                                        body:JSON.stringify(data)
         })
@@ -53,4 +53,5 @@ export default function Contact(){
             <div className={`${messege!==""?"block":"hidden"} h-full w-full absolute inset-0 bg-[rgba(0,0,0,0.5)] backdrop-blur-[10px]`}></div>
         </section>
     )
+
 }
